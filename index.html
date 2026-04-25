@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird Hunt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="panel">
+      <div>
+        <p class="eyebrow">Offline Mini Game</p>
+        <h1>Bird Hunt</h1>
+        <p class="subtitle">Spot the bird, left click it, and survive as the sky gets busier.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Wave</span>
+          <strong id="wave">1 Bird</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Status</span>
+          <strong id="status">Press start</strong>
+        </div>
+      </div>
+
+      <label class="slider-group" for="speed">
+        <span>Bird Speed</span>
+        <div class="slider-row">
+          <input id="speed" type="range" min="1" max="10" value="1" step="1">
+          <output id="speed-value">1</output>
+        </div>
+      </label>
+
+      <div class="controls">
+        <button id="start-button" type="button">Start Game</button>
+      </div>
+
+      <p class="instructions">
+        Each bird is worth 10 points. Click every bird before it escapes the sky.
+        Each new wave adds one more bird than the last. Birds must be clicked before they cross the escape line.
+      </p>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="game-canvas" width="1100" height="700" aria-label="Bird hunt game area"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
